@@ -1,0 +1,63 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Microsoft.AspNetCore.SpaServices
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flate Signup And Login Form with Flat Responsive template :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <meta name="keywords" content="Transparent Organic Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates" />
+    <link href="~/dist/css/style.css" rel='stylesheet' type='text/css' />
+    <!--web-fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!--/web-fonts-->
+</head>
+<body>
+    <div class="two-forms">
+        <div class="wrap">
+            <div class="signup">
+                <h2>Signup<span>Form</span></h2>
+                <div class="singup-info">
+                    <form asp-controller="Authentification" asp-action="Registration" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="users">
+                            <input name="UserName" type="text" class="text" placeholder="User Name">
+                            <input name="Email" type="text" class="text" placeholder="Email Address">
+                            <input name="Password" type="password" class="text" placeholder="Password">
+                            <input name="ConfirmPassword" type="password" class="text" placeholder="Repeat Password">
+                        </div>
+                        <div class="btns">
+                            <input type="submit" value="signup">
+                        </div>
+                    </form>
+                    <div class="clear"> </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+
+            <div class="login">
+                <h3>Login<span>Form</span></h3>
+                <form asp-controller="Authentification" asp-action="Login" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="login-info">
+                        <input name="UserName" type="text" class="text" placeholder="User Name">
+                        <input name="Password" type="password" class="text" placeholder="Password">
+                        <div class="btns">
+                            <input type="submit" value="login">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"> </div>
+    </div>
+
+</body>
+</html>
